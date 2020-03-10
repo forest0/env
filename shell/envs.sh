@@ -8,7 +8,7 @@ export PATH=$PATH:$GOPATH/bin
 # tex
 export PATH=$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 
