@@ -1,3 +1,7 @@
+" :verbose imap xx
+" above command can be used to check the last time where xx mapping is defined
+
+
 " insert {{{
 
 " elegent like playing piano, huh?
