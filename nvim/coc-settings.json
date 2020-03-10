@@ -1,0 +1,89 @@
+{
+    "suggest.triggerAfterInsertEnter": false,
+    "suggest.timeout": 500,
+    "suggest.noselect": true,
+    // "suggest.detailField":"preview",
+    "suggest.snippetIndicator": "",
+    "suggest.triggerCompletionWait": 100,
+    "suggest.echodocSupport": true,
+    "suggest.completionItemKindLabels": {
+        "keyword": "",
+        "variable": "",
+        "value": "",
+        "operator": "Ψ",
+        "function": "⨕",
+        "reference": "渚",
+        "constant": "",
+        "method": "",
+        "struct": "פּ",
+        "class": "",
+        "interface": "",
+        "text": "♣",
+        "enum": "",
+        "enumMember": "",
+        "module": "",
+        "color": "",
+        "property": "",
+        "field": "",
+        "unit": "",
+        "event": "鬒",
+        "file": "",
+        "folder": "",
+        "snippet": "",
+        "typeParameter": "",
+        "default": ""
+    },
+
+    //diagnostic
+    "diagnostic.signOffset": 9999999,
+    "diagnostic.errorSign": "✗",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.displayByAle": false,
+    "diagnostic.refreshOnInsertMode": false,
+
+    //Snippet
+    "coc.preferences.snippetStatusText": "🅢 ",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+    "snippets.snipmate.author": "forrest9643",
+
+
+    //prettier
+    "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
+    "coc.preferences.colorSupport": true,
+    // FIXME: 2020-03-09, bug of coc?
+    // enableFloatHighlight will cause
+    // many vim instance start but will not exit.
+    "coc.preferences.enableFloatHighlight": true,
+
+    //python
+    "python.autoComplete.addBrackets": true,
+
+    //git
+    "git.enableGutters": true,
+    "git.branchCharacter":"",
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                },
+                "highlight": { "lsRanges" : true }
+            }
+        },
+        "golang": {
+            "command": "gopls",
+            "args": [],
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"]
+        }
+    }
+}

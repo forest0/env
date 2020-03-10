@@ -1,0 +1,156 @@
+# startup loading {{{
+
+- repo: mhinz/vim-startify
+  normalized_name: startify
+  depends: vim-devicons
+  on_cmd: Startify
+  hook_source: source $VIMPATH/core/plugins/startify.vim
+  hook_post_source: |
+    function! StartifyEntryFormat()
+      return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+    endfunction
+
+- repo: Shougo/dein.vim
+  normalized_name: dein
+
+- repo: ryanoasis/vim-devicons
+  normalized_name: devicons
+
+- repo: taigacute/spaceline.vim
+  normalized_name: spaceline
+  depends: vim-devicons
+  hook_source: source $VIMPATH/core/plugins/spaceline.vim
+
+- repo: neoclide/coc.nvim
+  normalized_name: coc
+  merge: 0
+  rev: release
+  hook_source: source $VIMPATH/core/plugins/coc.vim
+
+- repo: honza/vim-snippets
+
+- repo: mhinz/vim-startify
+  normalized_name: startify
+  depends: vim-devicons
+  hook_source: source $VIMPATH/core/plugins/startify.vim
+  hook_post_source: |
+    function! StartifyEntryFormat()
+      return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+    endfunction
+
+# }}}
+
+
+# lazy loading {{{
+
+# interface {{{
+
+- repo: t9md/vim-choosewin
+  normalized_name: choosewin
+  on_map: { n: <Plug> }
+  hook_source: source $VIMPATH/core/plugins/vim-choosewin.vim
+
+- repo: liuchengxu/vim-which-key
+  normalized_name: which-key
+  on_cmd: [Whichkey, Whichkey!]
+  hook_post_source: source $VIMPATH/core/plugins/whichkey.vim
+
+- repo: easymotion/vim-easymotion
+  normalized_name: easymotion
+  on_map: { n: <Plug> }
+  hook_source: source $VIMPATH/core/plugins/vim-easymotion.vim
+
+# }}}
+
+# coding {{{
+
+- repo: Yggdroot/indentLine
+  on_ft:
+    - python
+    - html
+    - css
+    - vim
+    - javascript
+    - jsx
+    - javascript.jsx
+    - vue
+    - cpp
+    - c
+  hook_source: source $VIMPATH/core/plugins/indentline.vim
+
+- repo: jackguo380/vim-lsp-cxx-highlight
+  depends: coc.nvim
+  on_ft: [c, cpp, objc, objcpp]
+  hook_source: source $VIMPATH/core/plugins/vim-lsp-cxx-highlight.vim
+
+- repo: jiangmiao/auto-pairs
+  on_ft: [c, cpp, python, vim, bash, java, javascript, html, go]
+
+- repo: junegunn/vim-easy-align
+  on_ft: [markdown,vim,cpp,python]
+
+- repo: scrooloose/nerdcommenter
+  hook_source: source  $VIMPATH/core/plugins/nerdcommenter.vim
+  on_map: { vnx: <Plug>NERDCommenter }
+
+# }}}
+
+# debug {{{
+
+# TODO
+# - repo: puremourning/vimspector
+#   hook_source: |
+#       let g:vimspector_enable_mappings = 'HUMAN'
+
+# }}}
+
+# file explorer {{{
+
+- repo: Shougo/defx.nvim
+  on_cmd: Defx
+  hook_source: source $VIMPATH/core/plugins/defx.vim
+
+- repo: kristijanhusak/defx-git
+  on_source: defx.nvim
+  hook_source: source $VIMPATH/core/plugins/defx-git.vim
+
+- repo: kristijanhusak/defx-icons
+  on_source: defx.nvim
+
+# }}}
+
+# search {{{
+
+- repo: Yggdroot/LeaderF
+  build: ./install.sh
+  on_cmd:
+    - LeaderfFile
+    - LeaderfMru
+    - LeaderfMruCwd
+    - LeaderfBufferAll
+    - LeaderfBufTag
+    - LeaderfFunctionAll
+    - LeaderfLine
+    - LeaderfRgInteractive
+  hook_source: source $VIMPATH/core/plugins/LeaderF.vim
+
+# }}}
+
+# language {{{
+
+- repo: tpope/vim-markdown
+  on_ft: markdown
+  hook_source: source $VIMPATH/core/plugins/vim-markdown.vim
+
+# }}}
+
+# textobject {{{
+
+# }}}
+
+# Comment plugins {{{
+# }}}
+
+# }}}
+
+# vim: set foldmethod=marker:
