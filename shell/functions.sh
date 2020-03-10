@@ -39,3 +39,8 @@ search_in_file() {
     rg --files-with-matches --no-messages "$1" \
         | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
 }
+
+reload_shell() {
+    # TODO: check is there is bg cmd?
+    exec zsh -l
+}
