@@ -84,7 +84,17 @@
   hook_source: source $VIMPATH/core/plugins/vim-lsp-cxx-highlight.vim
 
 - repo: jiangmiao/auto-pairs
-  on_ft: [c, cpp, python, vim, bash, java, javascript, html, go]
+  on_ft:
+    - c
+    - cpp
+    - python
+    - vim
+    - bash
+    - java
+    - javascript
+    - html
+    - go
+    - markdown
 
 - repo: junegunn/vim-easy-align
   on_ft: [markdown,vim,cpp,python]
@@ -141,6 +151,16 @@
 - repo: tpope/vim-markdown
   on_ft: markdown
   hook_source: source $VIMPATH/core/plugins/vim-markdown.vim
+
+# edit in Quiver is really a pain
+- repo: iamcco/markdown-preview.nvim
+  on_ft:
+    - markdown
+    - pandoc.markdown
+    - rmd
+  build: |
+    sh -c "cd app & yarn install"
+  hook_source: source $VIMPATH/core/plugins/markdown-preview.vim
 
 # }}}
 
