@@ -1,0 +1,76 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet toc "table of content" b
+[[TOC]]
+endsnippet
+
+snippet set "set {}" w
+\\{ $1 \\}
+endsnippet
+
+snippet eq "equation" b
+$$
+$1
+$$
+endsnippet
+
+snippet aligned "aligned environment" b
+$$
+\\begin{aligned}
+  $1
+\\end{aligned}
+$$
+$0
+endsnippet
+
+snippet h2 "header level 2" b
+## $1
+endsnippet
+snippet h3 "header level 3" b
+### $1
+endsnippet
+snippet h4 "header level 4" b
+#### $1
+endsnippet
+snippet h5 "header level 5" b
+##### $1
+endsnippet
+snippet h6 "header level 6" b
+###### $1
+endsnippet
+
+snippet hat "hat symbol" w
+\\hat{$1}$0
+endsnippet
+
+snippet frac "fraction" w
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet p( "pretty ()"
+\\left( $1 \\right)$0
+endsnippet
