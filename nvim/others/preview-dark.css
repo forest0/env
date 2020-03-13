@@ -185,6 +185,10 @@ pre {
     border-radius: 3px;
 }
 
+p > code {
+    background: #343232;
+}
+
 b,
 strong {
     font-weight: bold;
