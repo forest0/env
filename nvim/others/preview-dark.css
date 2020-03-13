@@ -252,44 +252,60 @@ img {
 }
 
 table {
+    display: table;
     color: #b8b8b8;
-    border: 1px solid #cccccc;
-    border-collapse:collapse;
-    padding: 0;
+    background-color: #232222;
+    border: 1px solid #373737;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 2px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
 table tr {
-    border: 1px solid #cccccc;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table tr:hover {
+    background: #171514;
+}
+
+table td {
+    border-bottom: 1px solid #373737;
+    border-right: 1px solid #373737;
+    transition: background-color .25s ease;
+    height: 40px;
+    min-width: 0;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
     margin: 0;
-    padding: 0;
+    padding: 0 18px;
 }
 
-table tr:nth-child(2n) {
-}
-
-table tr th {
-    border: 1px solid #cccccc;
-    font-weight: bold;
-    text-align: left;
+table th {
+    border-bottom: 1px solid #373737;
+    border-right: 1px solid #373737;
+    background-color: #171514;
+    transition: background-color .25s ease;
+    height: 40px;
+    min-width: 0;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
     margin: 0;
-    padding: 6px 13px;
-}
-
-table tr td {
-    border: 1px solid #cccccc;
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-}
-
-table tr th :first-child,
-table tr td :first-child {
-    margin-top: 0;
-}
-
-table tr th :last-child,
-table tr td :last-child {
-    margin-bottom: 0;
+    padding: 0 18px;order-right: 1px solid #373737;
 }
 
 span.katex {
