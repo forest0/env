@@ -1,3 +1,18 @@
+" dark or light
+let s:theme = 'dark'
+let s:theme_css_dir = expand('~/.config/nvim/others')
+
+let s:theme_config = {
+    \    'dark': {
+    \        'preview': s:theme_css_dir . '/preview-dark.css',
+    \        'code': s:theme_css_dir . '/code-dark.css',
+    \    },
+    \    'light': {
+    \        'preview': s:theme_css_dir . '/preview-light.css',
+    \        'code': s:theme_css_dir . '/code-light.css',
+    \    },
+    \ }
+
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
 let g:mkdp_auto_start = 0
@@ -79,11 +94,11 @@ let g:mkdp_preview_options = {
 " using default css may have equation render bug
 " See: https://github.com/iamcco/markdown-preview.nvim/issues/149
 " let g:mkdp_markdown_css = ''
-let g:mkdp_markdown_css = expand('~/.config/nvim/others/dark.css')
+let g:mkdp_markdown_css = s:theme_config[s:theme]['preview']
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
-let g:mkdp_highlight_css = ''
+let g:mkdp_highlight_css = s:theme_config[s:theme]['code']
 
 " use a custom port to start server or random for empty
 let g:mkdp_port = ''
