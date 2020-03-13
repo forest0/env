@@ -177,7 +177,7 @@ code {
 }
 
 pre {
-    background: #343232;
+    background: #171514;
     white-space: pre;
     padding: 16px;
     overflow: auto;
@@ -186,7 +186,7 @@ pre {
 }
 
 p > code {
-    background: #343232;
+    background: #171514;
 }
 
 b,
