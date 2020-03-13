@@ -149,11 +149,11 @@ blockquote > p {
 }
 
 hr {
+    color: #373737;
     display: block;
     height: 2px;
     border: 0;
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid;
     margin: 1em 0;
     padding: 0;
 }
