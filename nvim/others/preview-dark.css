@@ -31,29 +31,20 @@ nav > ul {
 }
 
 a {
-    color: #e2b69b;
     text-decoration: none;
+    border-bottom: 1px solid #893128;
+    color: #b8b8b8;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
 }
 
 a:visited {
-    color: #cc3333;
+    /* FIXME: not working? */
+    border-bottom: 2px solid #893128;
 }
 
 a:hover {
-    color: #f90667;
-}
-
-a:active {
-    color: #faa700;
-}
-
-a:focus {
-    outline: thin dotted;
-}
-
-a:hover,
-a:active {
-    outline: 0;
+    border-bottom: 2px solid #893128;
 }
 
 svg > path {
@@ -132,6 +123,15 @@ h5 {
 
 h6 {
     font-size: 0.9em;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+    border: none !important;
 }
 
 blockquote {
