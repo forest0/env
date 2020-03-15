@@ -61,7 +61,7 @@ exports.activate = context => {
             } else if (filetype == 'typescript') {
                 prog = 'ts-node'
             } else if (filetype == 'python') {
-                prog = 'ipython --no-autoindent --pprint'
+                prog = 'ipython --no-autoindent --pprint --pdb'
             }
             terminal = await workspace.createTerminal({
                 cmd: 'zsh',
