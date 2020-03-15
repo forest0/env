@@ -71,8 +71,10 @@ snippet frac "fraction" w
 \\frac{$1}{$2}$0
 endsnippet
 
-snippet p( "pretty ()"
-\\left( $1 \\right)$0
+# NOTE: that the last ) will be complete automatically,
+# if add ) here, after snippet expansion, there will be two )
+snippet p( "pretty ()" w
+\\left( $1 \\right$0
 endsnippet
 
 snippet geq "great or equal to" w
@@ -81,4 +83,32 @@ endsnippet
 
 snippet leq "less or equal to" w
 \\leqslant
+endsnippet
+
+snippet bigO "big O notation" w
+\\bigO{ $1 }$0
+endsnippet
+
+snippet lim "limit" b
+\\lim_{ $1 }$0
+endsnippet
+
+snippet sum "summation" b
+\\sum_{$1}^{$2} $0
+endsnippet
+
+snippet prod "product" b
+\\prod_{$1}^{$2} $0
+endsnippet
+
+snippet cal "mathcal" i
+\\mathcal{$1}$0
+endsnippet
+
+snippet inf "infinity" i
+\\infty
+endsnippet
+
+snippet del "strikethrough"
+~~$1~~$0
 endsnippet
