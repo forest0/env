@@ -45,6 +45,10 @@
     "coc.preferences.snippetStatusText": "🅢 ",
     "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
     "snippets.snipmate.author": "forrest9643",
+    "snippets.snipmate.enable": false,
+    "snippets.ultisnips.directories": [
+        "UltiSnips"
+    ],
 
 
     //prettier
