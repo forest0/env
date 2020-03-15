@@ -77,6 +77,7 @@ let g:mkdp_preview_options = {
     \ 'katex': {
     \    'macros': {
     \        '\norm': '\left\lVert#1\right\rVert',
+    \        '\bigO': '\mathcal{O}(#1)',
     \    },
     \ },
     \ 'uml': {},

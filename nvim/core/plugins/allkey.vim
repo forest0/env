@@ -171,4 +171,10 @@ endif
 
 " }}}
 
+if dein#tap('vim-markdown')
+    autocmd FileType markdown nmap [h <Plug>Markdown_MoveToPreviousHeader
+    autocmd FileType markdown nmap ]h <Plug>Markdown_MoveToNextHeader
+endif
+
+
 " vim: set foldmethod=marker:

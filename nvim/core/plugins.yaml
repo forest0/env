@@ -148,7 +148,7 @@
 
 # language {{{
 
-- repo: tpope/vim-markdown
+- repo: plasticboy/vim-markdown
   on_ft: markdown
   hook_source: source $VIMPATH/core/plugins/vim-markdown.vim
 
