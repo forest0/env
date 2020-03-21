@@ -170,6 +170,7 @@ samp {
 
 code {
     color: rgba(255, 255, 255, 0.88);
+    background: #171514;
     font-family: monospace, monospace;
     /* typo here? */
     /* _font-family: 'courier new', monospace; */
@@ -183,10 +184,6 @@ pre {
     overflow: auto;
     line-height: 1.45;
     border-radius: 3px;
-}
-
-p > code {
-    background: #171514;
 }
 
 b,
