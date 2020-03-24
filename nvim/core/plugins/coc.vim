@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
     \ 'coc-highlight',
     \ 'coc-lists',
     \ 'coc-tabnine',
+    \ 'coc-dictionary',
     \ ]
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim

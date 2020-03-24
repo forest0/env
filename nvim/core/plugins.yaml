@@ -38,6 +38,12 @@
       return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
     endfunction
 
+- repo: skywind3000/vim-dict
+  on_ft:
+    - markdown
+    - text
+  hook_source: source $VIMPATH/core/plugins/vim-dict.vim
+
 # }}}
 
 
