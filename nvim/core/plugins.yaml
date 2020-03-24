@@ -140,6 +140,7 @@
 - repo: Yggdroot/LeaderF
   build: ./install.sh
   on_cmd:
+    - Leaderf
     - LeaderfFile
     - LeaderfMru
     - LeaderfMruCwd

@@ -129,8 +129,8 @@ if dein#tap('LeaderF')
     nnoremap <leader>sf :LeaderfFunction<cr>
 
     nnoremap <leader>hv :LeaderfHelp<cr>
-    nnoremap <silent> / :LeaderfLine<cr>
-    nnoremap <silent> * :LeaderfLineCword<cr>
+    nnoremap <silent> / :Leaderf line --stayOpen<cr>
+    nnoremap <silent> * :Leaderf line --cword --stayOpen<cr>
 endif
 
 " }}}
