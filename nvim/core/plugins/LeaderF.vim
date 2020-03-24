@@ -28,4 +28,4 @@ let g:Lf_ShortcutB = ""
 
 highlight def Lf_hl_match  gui=bold guifg=#cb4239 cterm=bold ctermfg=48
 highlight def Lf_hl_match0 gui=bold guifg=#cb4239 cterm=bold ctermfg=48
-highlight def Lf_hl_cursorline guifg=#73d64d ctermfg=226
+highlight def Lf_hl_cursorline guibg=#010101 ctermfg=226
