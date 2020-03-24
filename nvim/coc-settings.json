@@ -51,6 +51,11 @@
     ],
 
 
+    "tabnine.disable_filetypes": [
+        "markdown",
+        "text"
+    ],
+
     //prettier
     "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
     "coc.preferences.colorSupport": true,
