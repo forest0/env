@@ -158,7 +158,6 @@ hr {
     padding: 0;
 }
 
-pre,
 kbd,
 samp {
     color: #000;
@@ -178,6 +177,7 @@ code {
 }
 
 pre {
+    color: rgba(255, 255, 255, 0.88);
     background: #171514;
     white-space: pre;
     padding: 16px;
