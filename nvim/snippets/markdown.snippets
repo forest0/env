@@ -116,3 +116,43 @@ endsnippet
 snippet link "Link to something" i
 [${1:Text}]($2)$0
 endsnippet
+
+snippet line_chart "basic line chart" b
+\`\`\`chart
+{
+    "type": "line",
+    "data": {
+        "datasets": [{
+            "label": "entropy",
+            "backgroundColor": "#aaaaaa",
+            "borderColor": "#aaaaaa",
+            "fill": false,
+            "pointRadius": 4,
+            "cubicInterpolationMode": "monotone",
+            "data": [ {"x":0, "y":0}, {"x":1, "y":1}, {"x":2, "y":2} ]
+        }]
+    },
+    "options": {
+        "legend": {
+            "display": false
+        },
+        "scales": {
+            "xAxes": [{
+                "type": "linear",
+                "position": "bottom",
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "xlabel"
+                }
+            }],
+            "yAxes": [{
+                "scaleLabel": {
+                    "display": true,
+                    "labelString": "ylabel"
+                }
+            }]
+        }
+    }
+}
+\`\`\`
+endsnippet
