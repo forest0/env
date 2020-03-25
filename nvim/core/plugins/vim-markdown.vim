@@ -2,6 +2,7 @@ let g:vim_markdown_fenced_languages = [
     \ 'bash=sh',
     \ 'ini=dosini',
     \ 'js=javascript',
+    \ 'chart=json',
     \ ]
 
 let g:vim_markdown_folding_style_pythonic = 1
