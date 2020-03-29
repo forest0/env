@@ -42,6 +42,7 @@
   on_ft:
     - markdown
     - text
+    - gitcommit
   hook_source: source $VIMPATH/core/plugins/vim-dict.vim
 
 # }}}

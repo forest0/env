@@ -1,4 +1,5 @@
 let g:vim_dict_config = {
     \ 'html':'html,javascript,css',
-    \ 'markdown':'text'
+    \ 'markdown':'text',
+    \ 'gitcommit':'text',
     \}
