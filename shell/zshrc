@@ -104,6 +104,11 @@ eval "$(lua ~/software/z/z.lua --init zsh enhanced once fzf)"
 # enable ls colors
 eval `dircolors $config_dir/dir_colors`
 
+# fix tab completion color
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 _include $config_dir/p10k.zsh
 
