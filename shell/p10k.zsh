@@ -82,13 +82,14 @@
     # nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     # ranger                  # ranger shell (https://github.com/ranger/ranger)
     # nnn                     # nnn shell (https://github.com/jarun/nnn)
-    vim_shell               # vim shell indicator (:sh)
+    # vim_shell               # vim shell indicator (:sh)
     # midnight_commander      # midnight commander shell (https://midnight-commander.org/)
     # vpn_ip                # virtual private network indicator
     # ram                   # free RAM
     # load                  # CPU load
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
+    # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     # time                  # current time
+    my_asciinema            # asciinema record
     # =========================[ Line #2 ]=========================
     newline
     # public_ip             # public IP address
@@ -1040,6 +1041,11 @@
   function prompt_example() {
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
   }
+  function prompt_my_asciinema() {
+    if [[ -n "$IS_ASCIINEMA_RECORDING" ]]; then
+      p10k segment -f 208 -i '🎦'
+    fi
+  }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See
@@ -1058,6 +1064,12 @@
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
     prompt_example
+  }
+  function instant_prompt_my_asciinema() {
+    # Since prompt_example always makes the same `p10k segment` calls, we can call it from
+    # instant_prompt_example. This will give us the same `example` prompt segment in the instant
+    # and regular prompts.
+    prompt_my_asciinema
   }
 
   # User-defined prompt segments can be customized the same way as built-in segments.

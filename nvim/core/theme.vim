@@ -3,12 +3,21 @@ set t_Co=256
 
 " enable true color
 if has('termguicolors')
-    set termguicolors
+    if g:is_asciinema_recording
+        " FIXME 2020-04-03: gui colors can not work properly when
+        " recording by asciinema, namely, vim itself work well,
+        " but playing cast file in web is totally a mess.
+        echom 'asciinema recording, termguicolors disabled'
+    else
+        set termguicolors
+    endif
 endif
 
 set background=dark
 
-colorscheme  solarized8_flat
+let g:solarized_termtrans = 1
+colorscheme solarized8_flat
+
 
 
 " vim {{{

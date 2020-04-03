@@ -30,10 +30,20 @@ function! s:source_file(path, ...) abort
     endtry
 endfunction
 
+function! s:is_asciinema_recording()
+    return !empty($IS_ASCIINEMA_RECORDING)
+endfunction
+
+
 augroup MyAutoCmd
     autocmd!
     autocmd CursorHold *? syntax sync minlines=300
 augroup END
+
+let g:is_asciinema_recording = 0
+if s:is_asciinema_recording()
+    let g:is_asciinema_recording = 1
+endif
 
 if has('vim_starting')
     call s:source_file('init.vim')
