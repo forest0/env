@@ -39,11 +39,9 @@ $$
 endsnippet
 
 snippet aligned "aligned environment" b
-$$
-\\begin{aligned}
-  $1
-\\end{aligned}
-$$
+$$\\begin{aligned}
+$1
+\\end{aligned}$$
 $0
 endsnippet
 
@@ -69,12 +67,6 @@ endsnippet
 
 snippet frac "fraction" w
 \\frac{$1}{$2}$0
-endsnippet
-
-# NOTE: that the last ) will be complete automatically,
-# if add ) here, after snippet expansion, there will be two )
-snippet p( "pretty ()" w
-\\left( $1 \\right$0
 endsnippet
 
 snippet geq "great or equal to" w
@@ -122,7 +114,29 @@ snippet bs "bold symbol" i
 endsnippet
 
 snippet bb "mathbb" i
-\mathbb{$1}$0
+\\mathbb{$1}$0
+endsnippet
+
+snippet text "text" i
+\\text{$1}$0
+endsnippet
+
+snippet norm "norm" i
+\\norm{$1}$0
+endsnippet
+
+# FIXME
+# can we merge this there?
+snippet lr() "left right ()" i
+\\left($1\\right)$0
+endsnippet
+
+snippet lr[] "left right []" i
+\\left[$1\\right]$0
+endsnippet
+
+snippet lr{} "left right {}" i
+\\left\\\{$1\\right\\\}$0
 endsnippet
 
 snippet line_chart "basic line chart" b
