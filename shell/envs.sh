@@ -17,3 +17,11 @@ export PATH="/usr/local/bin:$PATH"
 
 # use gnu bin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# It is ok to use global proxy, since mellow will route traffic properly.
+# Although mellow use a tun by default(which will take over all traffic
+# transparently), it has a performance problem.
+#
+# TODO: check port available
+export http_proxy=http://127.0.0.1:2885/
+export https_proxy=http://127.0.0.1:2885/
