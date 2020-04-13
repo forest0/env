@@ -97,7 +97,7 @@ endif
 " choosewin {{{
 
 if dein#tap('vim-choosewin')
-    nmap ' <Plug>(choosewin)
+    nmap - <Plug>(choosewin)
 endif
 
 " }}}
