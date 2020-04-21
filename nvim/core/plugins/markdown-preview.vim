@@ -57,9 +57,6 @@ let g:mkdp_echo_preview_url = 0
 " default is empty
 let g:mkdp_browserfunc = ''
 
-" TODO: how-to use katex option?
-" the macro in katex seems dont work, using snippets as a workaround now
-
 " options for markdown render
 " mkit: markdown-it options for render
 " katex: katex options for math
@@ -91,10 +88,6 @@ let g:mkdp_preview_options = {
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-"
-" using default css may have equation render bug
-" See: https://github.com/iamcco/markdown-preview.nvim/issues/149
-" let g:mkdp_markdown_css = ''
 let g:mkdp_markdown_css = s:theme_config[s:theme]['preview']
 
 " use a custom highlight style must absolute path
@@ -106,4 +99,4 @@ let g:mkdp_port = ''
 
 " preview page title
 " ${name} will be replace with the file name
-let g:mkdp_page_title = '「${name}」'u
+let g:mkdp_page_title = '「${name}」'
