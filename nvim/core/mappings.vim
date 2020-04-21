@@ -21,6 +21,8 @@ nnoremap D d$
 " remove spaces at the end of lines
 nnoremap <silent> <leader>es :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
+noremap <silent>Q :confirm qall<cr>
+
 function! s:map_tabline()
     let l:cnt = 1
     while l:cnt < 10
