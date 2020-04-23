@@ -65,6 +65,7 @@
     "coc.preferences.enableFloatHighlight": true,
 
     //python
+    "python.jediEnabled": false, // seems that MPLS has better performance
     "python.autoComplete.addBrackets": true,
 
     //git
