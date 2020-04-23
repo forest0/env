@@ -116,10 +116,15 @@
 
 # debug {{{
 
-# TODO
-# - repo: puremourning/vimspector
-#   hook_source: |
-#       let g:vimspector_enable_mappings = 'HUMAN'
+- repo: puremourning/vimspector
+  on_ft:
+    - python
+    - c
+    - cpp
+  build: |
+    ./install_gadget.py --enable-c --enable-python
+  hook_source: |
+      let g:vimspector_enable_mappings = 'HUMAN'
 
 # }}}
 
