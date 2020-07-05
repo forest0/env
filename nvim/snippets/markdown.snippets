@@ -146,6 +146,33 @@ snippet lr{} "left right {}" i
 \\left\\\{$1\\right\\\}$0
 endsnippet
 
+snippet note "hugo shortcode of note" b
+{{< admonition type=note >}}
+${1:note_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet warning "hugo shortcode of warning" b
+{{< admonition type=warning >}}
+${1:warning_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet info "hugo shortcode of info" b
+{{< admonition type=info >}}
+${1:info_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet image "hugo shortcode of image" b
+{{< image src="$1"
+caption="$2">}}
+$0
+endsnippet
+
 snippet line_chart "basic line chart" b
 \`\`\`chart
 {
