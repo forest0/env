@@ -97,6 +97,8 @@
     - html
     - go
     - markdown
+    - vue
+    - vhdl
 
 - repo: junegunn/vim-easy-align
   on_ft: [markdown,vim,cpp,python]
@@ -111,6 +113,15 @@
     - text
     - gitcommit
   hook_source: source $VIMPATH/core/plugins/vim-dict.vim
+
+- repo: Konfekt/FastFold
+  on_ft:
+    - python
+  hook_source: source $VIMPATH/core/plugins/FastFold.vim
+
+- repo: tmhedberg/SimpylFold
+  on_ft:
+    - python
 
 # }}}
 
