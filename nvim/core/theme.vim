@@ -3,7 +3,7 @@ set t_Co=256
 
 " enable true color
 if has('termguicolors')
-    if g:is_asciinema_recording
+    if g:is_terminal_recording
         " FIXME 2020-04-03: gui colors can not work properly when
         " recording by asciinema, namely, vim itself work well,
         " but playing cast file in web is totally a mess.

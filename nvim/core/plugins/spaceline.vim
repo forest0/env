@@ -1,5 +1,5 @@
 let g:spaceline_colorscheme = 'solarized_dark'
-if g:is_asciinema_recording
+if g:is_terminal_recording
     " gui color can not work well when asciinema recording
     let g:spaceline_colorscheme = 'base16_dark'
 endif

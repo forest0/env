@@ -90,7 +90,7 @@
     # load                  # CPU load
     # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     # time                  # current time
-    my_asciinema            # asciinema record
+    terminal_record           # terminal record
     # =========================[ Line #2 ]=========================
     newline
     # public_ip             # public IP address
@@ -1042,8 +1042,8 @@
   function prompt_example() {
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
   }
-  function prompt_my_asciinema() {
-    if [[ -n "$IS_ASCIINEMA_RECORDING" ]]; then
+  function prompt_terminal_record() {
+    if [[ -n "$IS_TERMINAL_RECORDING" ]]; then
       p10k segment -f 208 -i '🎦'
     fi
   }
@@ -1066,11 +1066,11 @@
     # and regular prompts.
     prompt_example
   }
-  function instant_prompt_my_asciinema() {
+  function instant_prompt_terminal_record() {
     # Since prompt_example always makes the same `p10k segment` calls, we can call it from
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
-    prompt_my_asciinema
+    prompt_terminal_record
   }
 
   # User-defined prompt segments can be customized the same way as built-in segments.
