@@ -42,5 +42,5 @@ search_in_file() {
 
 reload_shell() {
     # TODO: check is there is bg cmd?
-    exec zsh -l
+    exec -l $SHELL
 }
