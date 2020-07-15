@@ -10,7 +10,6 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-highlight',
     \ 'coc-lists',
-    \ 'coc-tabnine',
     \ 'coc-dictionary',
     \ ]
 
