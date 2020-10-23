@@ -8,6 +8,7 @@ set splitbelow
 set bsdir=buffer
 if has('vim_starting')
     set encoding=UTF-8
+    set fileencodings=utf-8,gb18030
     scriptencoding UTF-8
 endif
 set laststatus=2
@@ -17,19 +18,37 @@ set fillchars+=vert:\|  " add a bar for vertical splits
 
 " clipboard {{{
 
-if has('mac')
-    let g:clipboard = {
-        \   'name': 'macOS-clipboard',
-        \   'copy': {
-        \      '+': 'pbcopy',
-        \      '*': 'pbcopy',
-        \    },
-        \   'paste': {
-        \      '+': 'pbpaste',
-        \      '*': 'pbpaste',
-        \   },
-        \   'cache_enabled': 0,
-        \ }
+if has('unix')
+    if has('mac')
+        let g:clipboard = {
+            \   'name': 'macOS-clipboard',
+            \   'copy': {
+            \      '+': 'pbcopy',
+            \      '*': 'pbcopy',
+            \    },
+            \   'paste': {
+            \      '+': 'pbpaste',
+            \      '*': 'pbpaste',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+    else
+        " FIXME: 2020-04-25
+        " neovim 0.4.3 can not handle escape sequence properly,
+        " so the following wont work
+        let g:clipboard = {
+            \   'name': 'Linux-clipboard',
+            \   'copy': {
+            \      '+': expand('~/.iterm2/it2copy'),
+            \      '*': expand('~/.iterm2/it2copy'),,
+            \    },
+            \   'paste': {
+            \      '+': '+',
+            \      '*': '*',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
+    endif
 endif
 
 if has('clipboard')
