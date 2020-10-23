@@ -131,6 +131,7 @@ if dein#tap('LeaderF')
     nnoremap <leader>hv :LeaderfHelp<cr>
     nnoremap <silent> / :Leaderf line --stayOpen<cr>
     nnoremap <silent> * :Leaderf line --cword --stayOpen<cr>
+    nnoremap <silent> ! :Leaderf cmdHistory --popup<cr>
 endif
 
 " }}}
