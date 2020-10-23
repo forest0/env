@@ -1,15 +1,5 @@
 # startup loading {{{
 
-- repo: mhinz/vim-startify
-  normalized_name: startify
-  depends: vim-devicons
-  on_cmd: Startify
-  hook_source: source $VIMPATH/core/plugins/startify.vim
-  hook_post_source: |
-    function! StartifyEntryFormat()
-      return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-    endfunction
-
 - repo: Shougo/dein.vim
   normalized_name: dein
 
@@ -39,6 +29,8 @@
     endfunction
 
 - repo: tpope/vim-surround
+
+- repo: skywind3000/asyncrun.vim
 
 # }}}
 
@@ -101,7 +93,11 @@
     - vhdl
 
 - repo: junegunn/vim-easy-align
-  on_ft: [markdown,vim,cpp,python]
+  on_ft:
+    - markdown
+    - vim
+    - cpp
+    - python
 
 - repo: scrooloose/nerdcommenter
   hook_source: source  $VIMPATH/core/plugins/nerdcommenter.vim
@@ -186,13 +182,6 @@
     sh -c "cd app & yarn install"
   hook_source: source $VIMPATH/core/plugins/markdown-preview.vim
 
-# }}}
-
-# textobject {{{
-
-# }}}
-
-# Comment plugins {{{
 # }}}
 
 # }}}
