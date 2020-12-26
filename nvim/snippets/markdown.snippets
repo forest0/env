@@ -85,7 +85,7 @@ snippet leq "less or equal to" w
 endsnippet
 
 snippet bigO "big O notation" w
-\\bigO{ $1 }$0
+\\mathcal{O} (n$1)$0
 endsnippet
 
 snippet lim "limit" w
@@ -146,6 +146,13 @@ snippet lr{} "left right {}" i
 \\left\\\{$1\\right\\\}$0
 endsnippet
 
+snippet tip "hugo shortcode of tip" b
+{{< admonition type=tip >}}
+${1:tip_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
 snippet note "hugo shortcode of note" b
 {{< admonition type=note >}}
 ${1:note_message_here}
@@ -153,9 +160,37 @@ ${1:note_message_here}
 $0
 endsnippet
 
+snippet example "hugo shortcode of example" b
+{{< admonition type=example >}}
+${1:example_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet question "hugo shortcode of question" b
+{{< admonition type=question >}}
+${1:question_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
 snippet warning "hugo shortcode of warning" b
 {{< admonition type=warning >}}
 ${1:warning_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet bug "hugo shortcode of bug" b
+{{< admonition type=warning >}}
+${1:bug_message_here}
+{{< /admonition >}}
+$0
+endsnippet
+
+snippet fail "hugo shortcode of failure" b
+{{< admonition type=failure >}}
+${1:failure_message_here}
 {{< /admonition >}}
 $0
 endsnippet
