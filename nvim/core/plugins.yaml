@@ -32,6 +32,8 @@
 
 - repo: skywind3000/asyncrun.vim
 
+- repo: Konfekt/vim-CtrlXA
+
 # }}}
 
 
