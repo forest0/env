@@ -119,4 +119,7 @@ _include $config_dir/p10k.zsh
 # iterm2 shell integration
 # NOTE: load this one at last or z will not work
 # see: https://gitlab.com/gnachman/iterm2/issues/7731
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export iterm2_hostname="{{placeholder_iterm2_hostname}}" # placeholder will be filled by env_setup.sh
+fi
 _include $config_dir/iterm2_shell_integration.zsh
