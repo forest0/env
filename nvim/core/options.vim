@@ -40,7 +40,7 @@ if has('unix')
             \   'name': 'Linux-clipboard',
             \   'copy': {
             \      '+': expand('~/.iterm2/it2copy'),
-            \      '*': expand('~/.iterm2/it2copy'),,
+            \      '*': expand('~/.iterm2/it2copy'),
             \    },
             \   'paste': {
             \      '+': '+',
