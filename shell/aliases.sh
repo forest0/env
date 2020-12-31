@@ -1,8 +1,13 @@
-alias ls='gls --color=auto'
-alias ll='gls -alFh --color=auto'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ls='gls --color=auto'
+    alias ll='gls -alFh --color=auto'
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias ls='ls --color=auto'
+    alias ll='ls -alFh --color=auto'
+fi
 
-alias cat='/usr/local/bin/bat --theme=TwoDark'
-alias pcat='/usr/local/bin/bat --theme=TwoDark --style=plain'
+alias cat='bat --theme=TwoDark'
+alias pcat='bat --theme=TwoDark --style=plain'
 
 # alias pftp='ftp -p'
 
