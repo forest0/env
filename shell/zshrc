@@ -101,7 +101,9 @@ _include $config_dir/aliases.sh
 _include $config_dir/fzf.zsh
 
 # z
-eval "$(lua ~/software/z/z.lua --init zsh enhanced once fzf)"
+if [[ -x "$(command -v lua)" ]]; then
+    eval "$(lua $HOME/software/z/z.lua --init zsh enhanced once fzf)"
+fi
 
 # enable ls colors
 eval `dircolors $config_dir/dir_colors`
