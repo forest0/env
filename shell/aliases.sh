@@ -16,3 +16,6 @@ alias scheme='rlwrap scheme'
 alias asciinema_record='asciinema rec -i 1.5 -c "IS_TERMINAL_RECORDING=asciinema zsh"'
 
 # alias lldb='PATH=/usr/bin lldb'
+
+# print Chinese characters
+alias tree='tree -N'
