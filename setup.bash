@@ -182,8 +182,14 @@ install_iterm2_shell_integration() {
     sed -i "s/{{placeholder_iterm2_hostname}}/$iterm2_hostname/" ~/.zshrc
 }
 
+config_tmux() {
+    [[ -f "$HOME/.tmux.conf" ]] && cp "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak"
+    cp "$SCRIPT_DIR/shell/tmux.conf" "$HOME/.tmux.conf"
+}
+
 config_shell() {
     config_zsh
+    config_tmux
 
     install_fzf
     install_bat
