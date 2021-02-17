@@ -59,8 +59,7 @@
     "coc.preferences.enableFloatHighlight": true,
 
     //python
-    "python.jediEnabled": false, // seems that MPLS has better performance
-    "python.autoComplete.addBrackets": true,
+    "python.pythonPath": "/usr/local/bin/python3",
 
     //git
     "git.enableGutters": true,
