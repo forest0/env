@@ -70,10 +70,11 @@ let g:which_key_global_map['s'] = {
     \ 'name': '+search',
     \ 'p':    'file-path',
     \ 'm':    'MRU',
-    \ 'c':    'content',
+    \ 'c':    'rg-interactive',
     \ 'r':    'content-resume',
     \ 'w':    'under-cursor',
     \ 'f':    'function',
+    \ 'l':    'line-in-all-buffer',
     \ }
 " }}}
 

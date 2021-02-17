@@ -127,6 +127,7 @@ if dein#tap('LeaderF')
     nnoremap <leader>sc :LeaderfRgInteractive<cr>
     nnoremap <leader>sr :LeaderfRgRecall<cr>
     nnoremap <leader>sf :LeaderfFunction<cr>
+    nnoremap <leader>sl :LeaderfLineAll<cr>
 
     nnoremap <leader>hv :LeaderfHelp<cr>
     nnoremap <silent> / :Leaderf line --stayOpen<cr>
