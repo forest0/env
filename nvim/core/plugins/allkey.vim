@@ -122,11 +122,11 @@ endif
 " LeaderF {{{
 
 if dein#tap('LeaderF')
-    nnoremap <leader>sp :LeaderfFile<cr>
+    nnoremap <leader>sf :LeaderfFile<cr>
     nnoremap <leader>sm :LeaderfMru<cr>
-    nnoremap <leader>sc :LeaderfRgInteractive<cr>
-    nnoremap <leader>sr :LeaderfRgRecall<cr>
-    nnoremap <leader>sf :LeaderfFunction<cr>
+    nnoremap <leader>sr :LeaderfRgInteractive<cr>
+    nnoremap <leader>sR :LeaderfRgRecall<cr>
+    nnoremap <leader>sF :LeaderfFunction<cr>
     nnoremap <leader>sl :LeaderfLineAll<cr>
 
     nnoremap <leader>hv :LeaderfHelp<cr>

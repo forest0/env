@@ -68,12 +68,12 @@ let g:which_key_global_map['l'] = {
 
 let g:which_key_global_map['s'] = {
     \ 'name': '+search',
-    \ 'p':    'file-path',
+    \ 'f':    'find',
     \ 'm':    'MRU',
-    \ 'c':    'rg-interactive',
-    \ 'r':    'content-resume',
+    \ 'r':    'rg-interactive',
+    \ 'R':    'rg-recall',
     \ 'w':    'under-cursor',
-    \ 'f':    'function',
+    \ 'F':    'function',
     \ 'l':    'line-in-all-buffer',
     \ }
 " }}}
