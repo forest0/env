@@ -10,14 +10,16 @@ let g:python3_host_skip_check = 1
 let g:python_host_skip_check = 1
 
 " python interpreter for neovim
-" TODO: python virtualenv?
+let g:python_host_prog  = '/usr/bin/python'
 let s:sysname = substitute(system('uname'), '\n', '', '')
-if s:sysname =='Darwin'
+if !empty($VIRTUAL_ENV)
+    let g:python3_host_prog  = $VIRTUAL_ENV . '/bin/python3'
+elseif s:sysname =='Darwin'
     let g:python3_host_prog  = '/usr/local/bin/python3'
-    let g:python_host_prog  = '/usr/local/bin/python'
 elseif s:sysname == 'Linux'
     let g:python3_host_prog  = '/usr/bin/python3'
-    let g:python_host_prog  = '/usr/bin/python'
+else
+    echomsg 'g:python3_host_prog not set, be careful'
 endif
 
 " }}}
