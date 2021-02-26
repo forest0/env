@@ -160,7 +160,8 @@ endif
 " easy-align {{{
 
 if dein#tap('vim-easy-align')
-    xmap a <Plug>(EasyAlign)
+    xmap ga <Plug>(EasyAlign)
+    nmap ga <Plug>(EasyAlign)
 endif
 
 " }}}
