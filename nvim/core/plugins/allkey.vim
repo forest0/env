@@ -168,7 +168,7 @@ endif
 " eaysmotion {{{
 
 if dein#tap('vim-easymotion')
-    nmap f <Plug>(easymotion-overwin-f)
+    nmap t <Plug>(easymotion-overwin-f)
 endif
 
 " }}}
