@@ -52,7 +52,7 @@ if has('unix')
 endif
 
 if has('clipboard')
-    set clipboard& clipboard+=unnamedplus
+    set clipboard=unnamedplus
 endif
 
 " }}}
