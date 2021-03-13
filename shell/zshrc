@@ -104,7 +104,7 @@ _include $config_dir/envs.sh
 _include $config_dir/aliases.sh
 
 # fzf
-_include $config_dir/fzf.zsh
+_include $config_dir/fzf.sh
 
 # z
 if [[ -x "$(command -v lua)" ]]; then
@@ -128,4 +128,6 @@ _include $config_dir/p10k.zsh
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export iterm2_hostname="{{placeholder_iterm2_hostname}}" # placeholder will be filled by env_setup.sh
 fi
-_include $config_dir/iterm2_shell_integration.zsh
+_include $config_dir/iterm2_shell_integration.sh
+
+unset config_dir
