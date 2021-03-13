@@ -86,6 +86,7 @@ change_default_shell_if_necessary() {
 
 backup_zshrc_if_exist() {
     if [ -f "$HOME/.zshrc" ]; then
+        cp "$HOME/.zshrc" "$HOME/.zshrc.bak"
         msg "backup original zshrc to $HOME/.zshrc.bak"
     fi
 }
