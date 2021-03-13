@@ -215,6 +215,16 @@ config_conda() {
     msg "${GREEN}conda config done\n${NOFORMAT}"
 }
 
+config_conda_if_necessary() {
+    if [[ -n "${enable_conda}" ]]; then
+        if [[ -d "${HOME}/runtime/python/miniconda" ]]; then
+            msg "${ORANGE}It seems that conda already installed, skip...${NOFORMAT}"
+        else
+            config_conda
+        fi
+    fi
+}
+
 parse_params() {
   # default values of variables set from params
   enable_conda=''
@@ -266,12 +276,6 @@ check_dependency
 config_shell
 config_neovim
 
-if [[ -n "${enable_conda}" ]]; then
-    if [[ -d "${HOME}/runtime/python/miniconda" ]]; then
-        msg "${ORANGE}It seems that conda already installed, skip...${NOFORMAT}"
-    else
-        config_conda
-    fi
-fi
+config_conda_if_necessary
 
 msg "${GREEN}All done, cheers!\nRelogin and load vim to begin to install plugins${NOFORMAT}"
