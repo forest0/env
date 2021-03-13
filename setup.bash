@@ -125,7 +125,7 @@ install_nodejs() {
     msg "begin to download nodejs from $url"
     need_download "$SCRIPT_DIR/nodejs.tar.xz" && curl -L "$url" -o "$SCRIPT_DIR/nodejs.tar.xz"
     tar Jxf "$SCRIPT_DIR/nodejs.tar.xz" -C "$HOME/runtime"
-    # let the node path comes first, in case the machine has node already installed, but which is not the version we want
+    # let the node path comes first, in case the machine has node already installed, but whose version is not what we want
     echo 'export PATH="${HOME}/runtime/node-v'"$latest_lts_version"'-linux-x64/bin:$PATH"' >> "$HOME/.config/shell/envs.sh"
 }
 
