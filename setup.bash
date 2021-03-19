@@ -133,7 +133,8 @@ install_nodejs() {
     tar Jxf "$SCRIPT_DIR/nodejs.tar.xz" -C "$HOME/runtime"
     # let the node path comes first, in case the machine has node already installed, but whose version is not what we want
     echo 'export PATH="${HOME}/runtime/node-v'"$latest_lts_version"'-linux-x64/bin:$PATH"' >> "$HOME/.config/shell/envs.sh"
-    "${HOME}/runtime/node-v${latest_lts_version}-linux-x64/bin/npm" install -g neovim
+    export PATH="${HOME}/runtime/node-v${latest_lts_version}-linux-x64/bin:${PATH}"
+    npm install -g neovim
 }
 
 install_neovim() {
