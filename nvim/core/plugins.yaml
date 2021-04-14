@@ -31,6 +31,15 @@
 - repo: tpope/vim-surround
 
 - repo: skywind3000/asyncrun.vim
+  hook_source: |
+    let g:asyncrun_open = 6
+    let g:asyncrun_rootmarks = [
+        \ '.git',
+        \ '.svn',
+        \ '.root',
+        \ '.project',
+        \ '.hg'
+        \ ]
 
 - repo: Konfekt/vim-CtrlXA
 
