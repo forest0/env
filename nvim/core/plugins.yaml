@@ -177,6 +177,11 @@
     - LeaderfRgInteractive
   hook_source: source $VIMPATH/core/plugins/LeaderF.vim
 
+- repo: dbeniamine/cheat.sh-vim
+  hook_source: source $VIMPATH/core/plugins/cheat-sh.vim
+  on_cmd:
+    - Cheat
+
 # }}}
 
 # language {{{
