@@ -51,7 +51,9 @@
     ],
 
     //prettier
-    "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": ["markdown", "python"],
+    "coc.preferences.willSaveHandlerTimeout": 1000,
     "coc.preferences.colorSupport": true,
     // FIXME: 2020-03-09, bug of coc?
     // enableFloatHighlight will cause
@@ -60,6 +62,9 @@
 
     //python
     "python.pythonPath": "/usr/local/bin/python3",
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
 
     //git
     "git.enableGutters": true,
