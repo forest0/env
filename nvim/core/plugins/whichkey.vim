@@ -75,6 +75,7 @@ let g:which_key_global_map['s'] = {
     \ 'w':    'under-cursor',
     \ 'F':    'function',
     \ 'l':    'line-in-all-buffer',
+    \ 'b':    'buffer',
     \ }
 " }}}
 
