@@ -12,4 +12,6 @@ augroup MyAutoCmd
     autocmd Syntax * if 5000 < line('$') | syntax sync minlines=200 | endif
 
     autocmd FileType json syntax match Comment +\/\/.\+$+
+
+    autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
 augroup END

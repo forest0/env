@@ -65,6 +65,7 @@
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
+    "pyright.organizeimports.provider": "isort",
 
     //git
     "git.enableGutters": true,
