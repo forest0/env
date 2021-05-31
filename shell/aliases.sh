@@ -13,8 +13,9 @@ alias pcat='bat --theme=TwoDark --style=plain'
 
 # alias grep='grep --color=auto'
 
-alias vi='nvim'
-alias vim='nvim'
+alias vi="${VIM_BIN}"
+alias vim="${VIM_BIN}"
+alias nvim="${VIM_BIN}"
 
 alias scheme='rlwrap scheme'
 

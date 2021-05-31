@@ -6,10 +6,10 @@
 - repo: ryanoasis/vim-devicons
   normalized_name: devicons
 
-- repo: taigacute/spaceline.vim
-  normalized_name: spaceline
+- repo: hoob3rt/lualine.nvim
+  normalized_name: lualine
   depends: vim-devicons
-  hook_source: source $VIMPATH/core/plugins/spaceline.vim
+  hook_source: luafile $VIMPATH/lua/plugins/lualine_cfg.lua
 
 - repo: neoclide/coc.nvim
   normalized_name: coc

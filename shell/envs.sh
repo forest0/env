@@ -5,7 +5,9 @@ export GO111MODULE=on
 export GOPATH=~/workspace/go
 export PATH=$PATH:$GOPATH/bin
 
-export EDITOR=nvim
+export VIM_BIN="${HOME}/software/nvim/bin/nvim"
+export EDITOR="${VIM_BIN}"
+export GIT_EDITOR="${VIM_BIN}"
 
 export PATH=$PATH:/usr/local/sbin
 
