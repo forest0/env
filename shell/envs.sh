@@ -24,8 +24,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # transparently), it has a performance problem.
     #
     # TODO: check port available
-    export http_proxy=http://127.0.0.1:2885/
-    export https_proxy=http://127.0.0.1:2885/
+    export http_proxy="http://127.0.0.1:7890/"
+    export https_proxy="${http_proxy}"
 fi
-
-
