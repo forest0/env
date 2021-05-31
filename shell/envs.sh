@@ -7,6 +7,8 @@ export PATH=$PATH:$GOPATH/bin
 
 export EDITOR=nvim
 
+export PATH=$PATH:/usr/local/sbin
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # tex
     export PATH=$PATH:/usr/local/texlive/2020basic/bin/x86_64-darwin
