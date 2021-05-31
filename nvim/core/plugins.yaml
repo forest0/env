@@ -83,10 +83,27 @@
     - c
   hook_source: source $VIMPATH/core/plugins/indentline.vim
 
-- repo: jackguo380/vim-lsp-cxx-highlight
-  depends: coc.nvim
-  on_ft: [c, cpp, objc, objcpp]
-  hook_source: source $VIMPATH/core/plugins/vim-lsp-cxx-highlight.vim
+- repo: nvim-treesitter/nvim-treesitter
+  normalized_name: treesitter
+  if: has("nvim")
+  on_event: BufRead
+  hook_post_update: TSUpdate
+  hook_source: luafile $VIMPATH/lua/plugins/treesitter.lua
+  on_ft:
+    - bash
+    - bibtex
+    - latex
+    - c
+    - cpp
+    - python
+    - vim
+    - java
+    - javascript
+    - html
+    - css
+    - go
+    - json
+    - yaml
 
 - repo: jiangmiao/auto-pairs
   on_ft:
