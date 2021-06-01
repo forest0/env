@@ -33,6 +33,14 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 
 " }}}
 
+" tree-sitter {{{
+" TODO: check has tree-sitter
+
+" by default, these two are linked to Special, it is unnecessary
+hi link TSPunctDelimiter Normal
+hi link TSPunctBracket Normal
+" }}}
+
 " pmenu {{{
 
 highlight PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 cterm=NONE gui=NONE
