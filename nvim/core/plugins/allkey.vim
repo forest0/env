@@ -1,6 +1,6 @@
 " coc {{{
 
-if dein#tap('coc.nvim')
+if dein#tap('coc')
         " Show all diagnostics
         nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
         " Show commands
@@ -96,17 +96,9 @@ endif
 
 " choosewin {{{
 
-if dein#tap('vim-choosewin')
+if dein#tap('choosewin')
     nmap - <Plug>(choosewin)
 endif
-
-" }}}
-
-" quickrun {{{
-
-" if dein#tap('vim-quickrun')
-"     nnoremap <silent> <localleader>r :QuickRun<CR>
-" endif
 
 " }}}
 
@@ -140,7 +132,7 @@ endif
 
 " defx {{{
 
-if dein#tap('defx.nvim')
+if dein#tap('defx')
     nnoremap <F2> :Defx<CR>
 endif
 
@@ -148,7 +140,7 @@ endif
 
 " whichkey {{{
 
-if dein#tap('vim-which-key')
+if dein#tap('which-key')
     nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
     nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
     nnoremap <silent> [ :<c-u>WhichKey  '['<CR>
@@ -160,7 +152,7 @@ endif
 
 " easy-align {{{
 
-if dein#tap('vim-easy-align')
+if dein#tap('easy-align')
     xmap ga <Plug>(EasyAlign)
 endif
 
@@ -174,10 +166,14 @@ endif
 
 " }}}
 
+" vim-markdown {{{
+
 if dein#tap('vim-markdown')
     autocmd FileType markdown nmap [h <Plug>Markdown_MoveToPreviousHeader
     autocmd FileType markdown nmap ]h <Plug>Markdown_MoveToNextHeader
 endif
+
+" }}}
 
 
 " vim: set foldmethod=marker:

@@ -1,18 +1,18 @@
 # startup loading {{{
 
 - repo: Shougo/dein.vim
-  normalized_name: dein
+  name: dein
 
 - repo: ryanoasis/vim-devicons
-  normalized_name: devicons
+  name: devicons
 
 - repo: hoob3rt/lualine.nvim
-  normalized_name: lualine
+  name: lualine
   depends: vim-devicons
   hook_source: luafile $VIMPATH/lua/plugins/lualine_cfg.lua
 
 - repo: neoclide/coc.nvim
-  normalized_name: coc
+  name: coc
   merge: 0
   rev: release
   hook_source: source $VIMPATH/core/plugins/coc.vim
@@ -20,7 +20,7 @@
 - repo: honza/vim-snippets
 
 - repo: mhinz/vim-startify
-  normalized_name: startify
+  name: startify
   depends: vim-devicons
   hook_source: source $VIMPATH/core/plugins/startify.vim
   hook_post_source: |
@@ -51,17 +51,17 @@
 # interface {{{
 
 - repo: t9md/vim-choosewin
-  normalized_name: choosewin
+  name: choosewin
   on_map: { n: <Plug> }
   hook_source: source $VIMPATH/core/plugins/vim-choosewin.vim
 
 - repo: liuchengxu/vim-which-key
-  normalized_name: which-key
+  name: which-key
   on_cmd: [Whichkey, Whichkey!]
   hook_post_source: source $VIMPATH/core/plugins/whichkey.vim
 
 - repo: easymotion/vim-easymotion
-  normalized_name: easymotion
+  name: easymotion
   on_map: { n: <Plug> }
   hook_source: source $VIMPATH/core/plugins/vim-easymotion.vim
 
@@ -84,7 +84,7 @@
   hook_source: source $VIMPATH/core/plugins/indentline.vim
 
 - repo: nvim-treesitter/nvim-treesitter
-  normalized_name: treesitter
+  name: treesitter
   if: has("nvim")
   on_event: BufRead
   hook_post_update: TSUpdate
@@ -121,6 +121,7 @@
     - vhdl
 
 - repo: junegunn/vim-easy-align
+  name: easy-align
   on_ft:
     - markdown
     - vim
@@ -166,15 +167,16 @@
 # file explorer {{{
 
 - repo: Shougo/defx.nvim
+  name: defx
   on_cmd: Defx
   hook_source: source $VIMPATH/core/plugins/defx.vim
 
 - repo: kristijanhusak/defx-git
-  on_source: defx.nvim
+  on_source: defx
   hook_source: source $VIMPATH/core/plugins/defx-git.vim
 
 - repo: kristijanhusak/defx-icons
-  on_source: defx.nvim
+  on_source: defx
 
 # }}}
 
