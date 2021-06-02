@@ -39,6 +39,14 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 " by default, these two are linked to Special, it is unnecessary
 hi link TSPunctDelimiter Normal
 hi link TSPunctBracket Normal
+
+" def func(param): # 1
+"     param # 2
+" #1 is TSParameter and highlighted as color A
+" #2 is TSVariable and highlighted as color B
+" color A is different from color B,
+" so just treat TSParameter as TSVariable
+hi link TSParameter TSVariable
 " }}}
 
 " pmenu {{{
@@ -52,7 +60,8 @@ highlight PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#85
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
-
+hi CocFadeOut guifg=#928374 ctermfg=245 gui=strikethrough
+hi CocErrorHighlight guifg=#ff0000 gui=undercurl
 " }}}
 
 " gitgutter coc-git {{{
