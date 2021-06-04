@@ -105,6 +105,17 @@
     - json
     - yaml
 
+- repo: nvim-treesitter/nvim-treesitter-textobjects
+  name: treesitter_textobjects
+  depends: treesitter
+  on_if: dein#is_sourced('treesitter')
+  hook_source: luafile $VIMPATH/lua/plugins/treesitter_textobjects_cfg.lua
+
+# - repo: nvim-treesitter/playground
+#   name: treesitter_playground
+#   depends: treesitter
+#   on_if: dein#is_sourced('treesitter')
+
 - repo: jiangmiao/auto-pairs
   on_ft:
     - c
