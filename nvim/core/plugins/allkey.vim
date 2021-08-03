@@ -1,4 +1,4 @@
-" coc {{{
+" coc {{
 
 if dein#tap('coc')
         " Show all diagnostics
@@ -8,14 +8,14 @@ if dein#tap('coc')
         " Find symbol of current document
         nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
         " Search workspace symbols
-        nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
+        " nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
         nnoremap <silent> <leader>lg  :<C-u>CocList --normal gstatus<CR>
+        " Resume latest coc list
+        " nnoremap <silent> <leader>lr  :<C-u>CocListResume<CR>
         " Do default action for next item.
         " nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
         " Do default action for previous item.
         " nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
-        " Resume latest coc list
-        nnoremap <silent> <leader>lr  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]d <Plug>(coc-diagnostic-prev)
         nmap <silent> [d <Plug>(coc-diagnostic-next)
@@ -92,6 +92,14 @@ if dein#tap('coc')
         endfunction
 endif
 
+if dein#tap('coc') && dein#tap('telescope.nvim') && dein#tap('telescope-coc.nvim')
+    nnoremap <silent> <leader>ld <cmd>Telescope coc diagnostics<cr>
+    nnoremap <silent> <leader>lc <cmd>Telescope coc code_actions<cr>
+    nnoremap <silent> <leader>lr <cmd>Telescope coc references<cr>
+    nnoremap <silent> <leader>li <cmd>Telescope coc implementations<cr>
+    nnoremap <silent> <leader>sm <cmd>Telescope coc mru<cr>
+endif
+
 " }}}
 
 " choosewin {{{
@@ -126,6 +134,22 @@ if dein#tap('LeaderF')
     nnoremap <silent> / :Leaderf line --stayOpen<cr>
     nnoremap <silent> * :Leaderf line --cword --stayOpen<cr>
     nnoremap <silent> ! :Leaderf cmdHistory --popup<cr>
+endif
+
+" }}}
+
+" telescope {{{
+if dein#tap('telescope.nvim')
+    nnoremap <leader>sf <cmd>Telescope find_files<cr>
+    nnoremap <leader>sc <cmd>Telescope commands<cr>
+    nnoremap <leader>sC <cmd>Telescope command_history<cr>
+    nnoremap <leader>ss <cmd>Telescope search_history<cr>
+    nnoremap <leader>sg <cmd>Telescope live_grep<cr>
+    nnoremap <leader>sb <cmd>Telescope buffers<cr>
+
+    nnoremap <leader>hv <cmd>Telescope help_tags<cr>
+    nnoremap <silent> / <cmd>Telescope current_buffer_fuzzy_find<cr>
+    nnoremap <silent> * <cmd>Telescope grep_string<cr>
 endif
 
 " }}}

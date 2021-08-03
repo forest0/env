@@ -206,19 +206,23 @@
 
 # search {{{
 
-- repo: Yggdroot/LeaderF
-  build: ./install.sh
+- repo: nvim-lua/popup.nvim
+  on_source: telescope.nvim
+
+- repo: nvim-lua/plenary.nvim
+  on_source: telescope.nvim
+
+- repo: nvim-telescope/telescope.nvim
   on_cmd:
-    - Leaderf
-    - LeaderfFile
-    - LeaderfMru
-    - LeaderfMruCwd
-    - LeaderfBufferAll
-    - LeaderfBufTag
-    - LeaderfFunctionAll
-    - LeaderfLine
-    - LeaderfRgInteractive
-  hook_source: source $VIMPATH/core/plugins/LeaderF.vim
+    - Telescope
+  hook_source: luafile $VIMPATH/lua/plugins/telescope.nvim.lua
+
+- repo: fannheyward/telescope-coc.nvim
+  depends:
+    - coc
+    - telescope.nvim
+  on_cmd: Telescope
+  hook_source: luafile $VIMPATH/lua/plugins/telescope-coc.lua
 
 - repo: dbeniamine/cheat.sh-vim
   hook_source: source $VIMPATH/core/plugins/cheat-sh.vim

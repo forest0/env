@@ -1,4 +1,5 @@
 " let gg happy with which_key_goto_map on 'g'
+"
 let g:which_key_fallback_to_native_key = 1
 
 " normal mappings {{{
@@ -58,23 +59,22 @@ let g:which_key_global_map['h'] = {
 
 let g:which_key_global_map['l'] = {
     \ 'name': '+list',
-    \ 'c':    'coc-commands',
+    \ 'c':    'code-actions',
     \ 'd':    'diagnostics',
     \ 'g':    'git-status',
     \ 'o':    'outline',
-    \ 'r':    'resume',
-    \ 's':    'symbols',
+    \ 'r':    'references',
+    \ 'i':    'implementations',
     \ }
 
 let g:which_key_global_map['s'] = {
     \ 'name': '+search',
     \ 'f':    'find',
+    \ 'c':    'commands',
+    \ 'C':    'command-history',
+    \ 's':    'search-history',
+    \ 'g':    'grep-interactive',
     \ 'm':    'MRU',
-    \ 'r':    'rg-interactive',
-    \ 'R':    'rg-recall',
-    \ 'w':    'under-cursor',
-    \ 'F':    'function',
-    \ 'l':    'line-in-all-buffer',
     \ 'b':    'buffer',
     \ }
 " }}}
