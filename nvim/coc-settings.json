@@ -35,7 +35,6 @@
     },
 
     //diagnostic
-    "diagnostic.signOffset": 9999999,
     "diagnostic.errorSign": "✗",
     "diagnostic.warningSign": "⚠",
     "diagnostic.displayByAle": false,
@@ -66,6 +65,9 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "pyright.organizeimports.provider": "isort",
+
+    // csharp
+    "omnisharp.version": "v1.37.3",
 
     //git
     "git.enableGutters": true,

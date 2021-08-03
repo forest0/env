@@ -84,6 +84,7 @@
     - cpp
     - c
     - go
+    - cs
   hook_source: |
     let g:indent_blankline_char = '│'
     let g:indent_blankline_use_treesitter = v:true
@@ -141,6 +142,7 @@
     - markdown
     - vue
     - vhdl
+    - cs
 
 - repo: junegunn/vim-easy-align
   name: easy-align
